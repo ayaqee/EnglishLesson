@@ -1,0 +1,65 @@
+﻿@model EnglishLesson.Models.VocabularyItem
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>VocabularyItem</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Word)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Word)
+            @Html.ValidationMessageFor(model => model.Word)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Translation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Translation)
+            @Html.ValidationMessageFor(model => model.Translation)
+        </div>
+
+        <div class="editor-label">
+            Sugestia 1
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.TranslateSuggestions[0].Suggestion)
+            @Html.ValidationMessageFor(model => model.Translation)
+        </div>
+
+        <div class="editor-label">
+            Sugestia 2
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.TranslateSuggestions[1].Suggestion)
+            @Html.ValidationMessageFor(model => model.Translation)
+        </div>
+        <div class="editor-label">
+            Sugestia 3
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.TranslateSuggestions[2].Suggestion)
+            @Html.ValidationMessageFor(model => model.Translation)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

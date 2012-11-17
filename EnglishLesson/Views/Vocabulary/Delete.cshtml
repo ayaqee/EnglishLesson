@@ -1,0 +1,28 @@
+﻿@model EnglishLesson.Models.VocabularyItem
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>VocabularyItem</legend>
+
+    <div class="display-label">Word</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Word)
+    </div>
+
+    <div class="display-label">Translated</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Translation)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

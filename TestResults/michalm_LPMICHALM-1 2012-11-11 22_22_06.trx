@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="af237138-9572-4c0c-a315-f59f97e9f68a" name="michalm@LPMICHALM-1 2012-11-11 22:22:06" runUser="SOFTSYSTEM\michalm" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1decb593-ac0b-402f-aa65-9dc5218e5839">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="C:\Users\michalm\Documents\Visual Studio 2010\Projects2\EnglishLesson\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="michalm_LPMICHALM-1 2012-11-11 22_22_06">
+      <DeploymentItem filename="C:\Users\michalm\Documents\Visual Studio 2010\Projects2\EnglishLesson\EnglishLesson\bin\EnglishLesson.dll" />
+      <DeploymentItem filename="C:\Users\michalm\Documents\Visual Studio 2010\Projects2\EnglishLesson\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-11-11T22:22:06.8758040+01:00" queuing="2012-11-11T22:22:06.9128061+01:00" start="2012-11-11T22:22:07.2408249+01:00" finish="2012-11-11T22:22:28.0280138+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\michalm\documents\visual studio 2010\projects2\englishlesson\testproject1\bin\debug\testproject1.dll" id="59863143-3238-122e-4d8a-637b491cc755">
+      <Execution id="24ae36e9-0aa3-4eb4-a173-3c064a3f439c" />
+      <TestMethod codeBase="C:/Users/michalm/Documents/Visual Studio 2010/Projects2/EnglishLesson/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.UnitTest1, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="59863143-3238-122e-4d8a-637b491cc755" executionId="24ae36e9-0aa3-4eb4-a173-3c064a3f439c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="24ae36e9-0aa3-4eb4-a173-3c064a3f439c" testId="59863143-3238-122e-4d8a-637b491cc755" testName="TestMethod1" computerName="LPMICHALM-1" duration="00:00:20.5492528" startTime="2012-11-11T22:22:07.2508255+01:00" endTime="2012-11-11T22:22:28.0020124+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24ae36e9-0aa3-4eb4-a173-3c064a3f439c">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TestProject1.UnitTest1.TestMethod1 threw exception: 
+System.Data.SqlClient.SqlException: Cannot drop database "EnglishLesson.Database.LessonContext" because it is currently in use.</Message>
+          <StackTrace>    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.SqlClient.SqlProviderServices.&lt;&gt;c__DisplayClass10.&lt;DbDeleteDatabase&gt;b__f(SqlConnection conn)
+   at System.Data.SqlClient.SqlProviderServices.UsingConnection(SqlConnection sqlConnection, Action`1 act)
+   at System.Data.SqlClient.SqlProviderServices.UsingMasterConnection(SqlConnection sqlConnection, Action`1 act)
+   at System.Data.SqlClient.SqlProviderServices.DbDeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Objects.ObjectContext.DeleteDatabase()
+   at System.Data.Entity.Internal.DatabaseOperations.DeleteIfExists(ObjectContext objectContext)
+   at System.Data.Entity.Database.Delete()
+   at System.Data.Entity.DropCreateDatabaseAlways`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Database.&lt;&gt;c__DisplayClass2`1.&lt;SetInitializerInternal&gt;b__0(DbContext c)
+   at System.Data.Entity.Internal.InternalContext.&lt;&gt;c__DisplayClass8.&lt;PerformDatabaseInitialization&gt;b__6()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.&lt;InitializeDatabase&gt;b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at TestProject1.UnitTest1.TestMethod1() in C:\Users\michalm\Documents\Visual Studio 2010\Projects2\EnglishLesson\TestProject1\UnitTest1.cs:line 26
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

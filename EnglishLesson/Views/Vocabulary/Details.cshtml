@@ -1,0 +1,34 @@
+﻿@model EnglishLesson.Models.VocabularyItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>VocabularyItem</legend>
+
+    <div class="display-label">Word</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Word)
+    </div>
+
+    <div class="display-label">Translated</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Translation)
+    </div>
+    @{
+        int index = 1;
+    foreach (EnglishLesson.Models.TranslateSuggestion suggestion in Model.TranslateSuggestions)
+    {
+        <div class="display-label">Suggestion @(index++)</div>
+        <div class="display-field">@suggestion.Suggestion</div>
+    }
+    }
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

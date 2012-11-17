@@ -1,0 +1,26 @@
+﻿@model EnglishLesson.Models.VocabularySet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>VocabularySet</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+    
+    @foreach (EnglishLesson.Models.VocabularyItem word in Model.Words)
+    {
+        <div class="display-label">@word.Word</div>
+    }
+    
